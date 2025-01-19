@@ -44,5 +44,3 @@ export default class Character {
     this.health = this.health > damagePoints ? this.health - damagePoints : 0;
   }
 }
-
-// console.log(Object.keys(CHARACTERS_DATA).includes("Bowman"))

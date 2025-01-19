@@ -1,6 +1,7 @@
 import Magician from '../magician.js';
 import {CHARACTERS_DATA} from '../character.js';
 
+
 test('Testing the successful creation of a Magician', () => {
   const magician = new Magician('Denis', 'Magician');
   const resultData = {

@@ -1,6 +1,7 @@
 import Daemon from '../daemon.js';
 import {CHARACTERS_DATA} from '../character.js';
 
+
 test('Testing the successful creation of a daemon', () => {
   const daemon = new Daemon('Denis', 'Daemon');
   const resultData = {

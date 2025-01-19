@@ -19,7 +19,6 @@ test.each([
   expect(bowman.health).toBe(resultHealth);
 });
 
-
 test('Testing the levelUp method of characters', () => {
   const bowman = new Bowman('Denis', 'Bowman');
   bowman.health = 50;

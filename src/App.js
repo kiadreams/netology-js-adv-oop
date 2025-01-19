@@ -5,6 +5,7 @@ import Swordsman from "./js/swordsman.js";
 import Undead from "./js/undead.js";
 import Zombie from "./js/zombie.js";
 
+
 const bowman = new Bowman('Denis', 'Bowman');
 console.log(bowman);
 

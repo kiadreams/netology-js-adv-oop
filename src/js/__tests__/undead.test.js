@@ -1,6 +1,7 @@
 import Undead from '../undead.js';
 import {CHARACTERS_DATA} from '../character.js';
 
+
 test('Testing the successful creation of a daemon', () => {
   const undead = new Undead('Denis', 'Undead');
   const resultData = {

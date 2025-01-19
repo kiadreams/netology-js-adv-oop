@@ -1,6 +1,7 @@
 import Bowman from '../bowman.js';
 import {CHARACTERS_DATA} from '../character.js';
 
+
 test('Testing the successful creation of a bowman', () => {
   const bowman = new Bowman('Denis', 'Bowman');
   const resultData = {
