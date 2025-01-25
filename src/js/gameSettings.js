@@ -1,4 +1,4 @@
-export const CHARACTERS_LIST = [
+export const CHARACTER_LIST = [
   'Bowman',
   'Swordsman',
   'Magician',

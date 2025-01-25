@@ -1,4 +1,4 @@
-import {CHARACTERS_LIST} from "./gameSettings.js";
+import {CHARACTER_LIST} from "./gameSettings.js";
 
 export default class Character {
 
@@ -6,7 +6,7 @@ export default class Character {
     if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('Имя должно быть строковым типом с длинной от 2 до 10 символов');
     }
-    if (typeof type !== 'string' || !CHARACTERS_LIST.includes(type)) {
+    if (typeof type !== 'string' || !CHARACTER_LIST.includes(type)) {
       throw new Error('Неправильно указан тип персонажа');
     }
     this.name = name;
