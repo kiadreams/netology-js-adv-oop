@@ -1,5 +1,5 @@
 import Undead from '../undead.js';
-import {CHARACTERS_DATA} from '../character.js';
+import {CHARACTERS_DATA} from '../gameSettings.js';
 
 
 test('Testing the successful creation of a daemon', () => {
@@ -12,5 +12,11 @@ test('Testing the successful creation of a daemon', () => {
     name: undead.name,
     type: undead.type
   };
-  expect(resultData).toEqual({...CHARACTERS_DATA.Undead, name: 'Denis', type: 'Undead'});
+  expect(resultData).toEqual({
+    ...CHARACTERS_DATA.Undead,
+    level: 1,
+    health: 100,
+    name: 'Denis',
+    type: 'Undead',
+  });
 });

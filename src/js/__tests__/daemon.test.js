@@ -1,5 +1,5 @@
 import Daemon from '../daemon.js';
-import {CHARACTERS_DATA} from '../character.js';
+import {CHARACTERS_DATA} from '../gameSettings.js';
 
 
 test('Testing the successful creation of a daemon', () => {
@@ -12,5 +12,11 @@ test('Testing the successful creation of a daemon', () => {
     name: daemon.name,
     type: daemon.type
   };
-  expect(resultData).toEqual({...CHARACTERS_DATA.Daemon, name: 'Denis', type: 'Daemon'});
+  expect(resultData).toEqual({
+    ...CHARACTERS_DATA.Daemon,
+    level: 1,
+    health: 100,
+    name: 'Denis',
+    type: 'Daemon',
+  });
 });
