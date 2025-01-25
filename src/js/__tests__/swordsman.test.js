@@ -1,5 +1,4 @@
 import Swordsman from '../swordsman.js';
-import {CHARACTERS_DATA} from '../gameSettings.js';
 
 
 test('Testing the successful creation of a daemon', () => {
@@ -13,7 +12,8 @@ test('Testing the successful creation of a daemon', () => {
     type: swordsman.type
   };
   expect(resultData).toEqual({
-    ...CHARACTERS_DATA.Swordsman,
+    attack: 40,
+    defence: 10,
     level: 1,
     health: 100,
     name: 'Denis',

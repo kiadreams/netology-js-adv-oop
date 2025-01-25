@@ -1,5 +1,4 @@
 import Bowman from '../bowman.js';
-import {CHARACTERS_DATA, GAME_VARIABLES} from '../gameSettings.js';
 
 
 test('Testing the successful creation of a bowman', () => {
@@ -13,7 +12,8 @@ test('Testing the successful creation of a bowman', () => {
     type: bowman.type
   };
   expect(resultData).toEqual({
-    ...CHARACTERS_DATA.Bowman,
+    attack: 25,
+    defence: 25,
     level: 1,
     health: 100,
     name: 'Denis',
@@ -23,16 +23,8 @@ test('Testing the successful creation of a bowman', () => {
 
 
 test.each([
-  [
-    'damage points less than health points',
-    70,
-    100 - 70 * (1 - CHARACTERS_DATA.Bowman.defence / 100),
-  ],
-  [
-    'damage points more than health points',
-    170 / (1 - CHARACTERS_DATA.Bowman.defence / 100),
-    0,
-  ]
+  ['damage points less than health points', 70, 100 - 70 * (1 - 25 / 100)],
+  ['damage points more than health points', 170 / (1 - 25 / 100), 0],
 ])('Testing the damage method of characters: %s', (condition, damagePoints, resultHealth) => {
   const bowman = new Bowman('Denis', 'Bowman');
   bowman.damage(damagePoints);
@@ -53,8 +45,8 @@ test('Testing the levelUp method of characters', () => {
   const expectedData = {
     level: 2,
     health: 100,
-    attack: CHARACTERS_DATA.Bowman.attack * GAME_VARIABLES.attackLevelUpMultiplier,
-    defence: CHARACTERS_DATA.Bowman.defence * GAME_VARIABLES.defenceLevelUpMultiplier,
+    attack: 25 * 1.2,
+    defence: 25 * 1.2,
   }
   expect(resultData).toEqual(expectedData);
 });

@@ -1,5 +1,4 @@
 import Magician from '../magician.js';
-import {CHARACTERS_DATA} from '../gameSettings.js';
 
 
 test('Testing the successful creation of a Magician', () => {
@@ -13,7 +12,8 @@ test('Testing the successful creation of a Magician', () => {
     type: magician.type
   };
   expect(resultData).toEqual({
-    ...CHARACTERS_DATA.Magician,
+    attack: 10,
+    defence: 40,
     level: 1,
     health: 100,
     name: 'Denis',
